@@ -34,7 +34,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 900px;
+    max-width: 750px;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -50,19 +50,97 @@ body {
 .img{
    width: 100%;
    height: 100%; 
-   border-radius: 7px;
    cursor: pointer;
-}
-
-.img: {
-    background-color: white;
+   position: relative;
+   
 }
 
 img {
     width: 100%;
     height: 100%;
+    border-radius: 6px;
 }
 
-img:hover {
-    
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(178, 100%, 50%, 0.375);
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out;
+    border-radius: 6px;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.container h1 {
+    font-size: 16px;
+    width: 100%;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: color 1s ease-in-out;
+    color: var(--White);
+}
+
+.container h1:hover {
+    color: var(--Cyan);
+}
+
+.container p {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+
+.small {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eth {
+    display: inline-flex;
+    align-items: center;
+    color: var(--Cyan);
+}
+
+.eth::before {
+    content: "";
+    background-image: url(../images/icon-ethereum.svg);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+}
+
+.left {
+    display: inline-flex;
+    align-items: center;
+    color: var(--Soft-blue);
+    font-size: 12px;
+}
+
+.left::before {
+    content: "";
+    background-image: url(../images/icon-clock.svg);
+    background-repeat: no-repeat;
+    width: 23px;
+    height: 15px;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--Very-dark-blue-line);
+    margin: 20px 0px 8px 0px;
 }
