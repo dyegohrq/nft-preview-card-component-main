@@ -11,6 +11,8 @@
     --Very-dark-blue--card: hsl(216, 50%, 16%);
     --Very-dark-blue-line: hsl(215, 32%, 27%);
     --White: hsl(0, 0%, 100%);
+
+    --transition: all .5s ease-in-out;
 }
 
 /* general config */
@@ -35,11 +37,48 @@ p{
     font-size: 18px;
 }
 
+/* Typography */
+.text-present-1 {
+    font-family: "Outfit", serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: auto;
+    letter-spacing: 0;
+}
+
+.text-present-2 {
+    font-family: "Outfit", serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0;
+}
+
+.text-present-3 {
+    font-family: "Outfit", serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: auto;
+    letter-spacing: 0;
+}
+
+.text-present-4 {
+    font-family: "Outfit", serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: auto;
+    letter-spacing: 0;
+}
+
+
+
 /* container */
 .container {
     background-color: var(--Very-dark-blue--card);
     width: 90%;
-    max-width: 545px;
+    max-width: 350px;
+    padding: 24px;
+    border-radius: 15px;
 }
 
 .container .wrapper {
@@ -47,6 +86,8 @@ p{
     height: 278px;
     display: flex;
     position: relative;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .container .wrapper .img {
@@ -65,7 +106,7 @@ p{
     justify-content: center;
     z-index: 999;
     color: transparent;
-    transition: all .5s ease-in-out;
+    transition: var(--transition);
     cursor: pointer;
 }
 
@@ -77,3 +118,106 @@ p{
 .container .wrapper .bg-card i {
     font-size: 35px;
 }
+
+.container .txt-card .description {
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.container .txt-card .description h1 {
+    margin: 24px 0 12px 0;
+    color: var(--White);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.container .txt-card .description h1:hover {
+    color: var(--Cyan);
+}
+
+.container .txt-card .description p {
+    margin: 12px 0 16px 0;
+    color: var(--Soft-blue);
+}
+
+.container .txt-card .description .days  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.container .txt-card .description .days .info-left {
+    font-family: "Outfit", serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 150%;
+    color: var(--Cyan);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.container .txt-card .description .days .info-right {
+    font-family: "Outfit", serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--Soft-blue);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.container .txt-card .description .days .info-right i, .container .txt-card .description .days .info-left i {
+    display: flex;
+    align-items: center;
+}
+
+.container .txt-card .user {
+    margin-top: 16px;
+}
+
+.container .txt-card .user .user-img {
+    width: 33px;
+    height: 33px;
+    background: url(../images/image-avatar.png) no-repeat center / cover;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.container .txt-card .user{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.container .txt-card .user .txt-user {
+    font-family: "Outfit", serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 140%;
+    color: var(--Soft-blue);
+}
+
+.container .txt-card .user .txt-user span {
+    color: var(--White);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.container .txt-card .user .txt-user span:hover {
+    color: var(--Cyan);
+}
+
+.attribution {
+    font-size: 14px;
+    font-family: "Outfit", serif;
+    letter-spacing: 150%;
+    text-align: center;
+    margin-top: 16px;
+    color: var(--Soft-blue);
+  }
+  .attribution a {
+    color: var(--Cyan);
+    text-decoration: none;
+  }
+
