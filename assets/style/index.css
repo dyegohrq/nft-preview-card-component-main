@@ -1,0 +1,79 @@
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    
+    /* ### Neutral */
+    
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue--card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* general config */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Very-dark-blue-main);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    font-size: 18px;
+}
+
+/* container */
+.container {
+    background-color: var(--Very-dark-blue--card);
+    width: 90%;
+    max-width: 545px;
+}
+
+.container .wrapper {
+    width: 100%;
+    height: 278px;
+    display: flex;
+    position: relative;
+}
+
+.container .wrapper .img {
+    background: url(../images/image-equilibrium.jpg) no-repeat center / cover;
+    width: 100%;
+    height: 100%;
+}   
+
+.container .wrapper .bg-card {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    color: transparent;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.container .wrapper .bg-card:hover {
+    background-color: rgba(0, 255, 247, 0.5);
+    color: var(--White);
+}
+
+.container .wrapper .bg-card i {
+    font-size: 35px;
+}
